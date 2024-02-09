@@ -1,0 +1,10 @@
+{
+    "name": "Mario-pc-port",
+    "version": "2.0.0",
+    "main": "public/main.js",
+    "module": "public/main.js",
+    "exports": {
+        ".": "./public/main.js",
+        "./submodule": null
+    }
+}

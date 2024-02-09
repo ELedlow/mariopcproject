@@ -3,41 +3,41 @@
 //---- Imports
 
 //---- game main:
-import { Level } from './Level.js';
-import { Timer } from './Timer.js';
-import { createLevelLoader } from './loaders/level.js';
-import { loadFont } from './loaders/font.js';
-import { loadEntities } from './entities.js';
-import { makePlayer, createPlayerEnv, findPlayers } from './player.js';
-import { setupKeyboard } from './input.js';
-import { createDashboardLayer } from './layers/dashboard.js';
-import { createColorLayer } from './layers/color.js';
-import { createTextLayer } from './layers/text.js';
-import { EventEmitter } from './EventEmitter.js';
-import { SceneRunner } from './SceneRunner.js';
-import { createPlayerProgressLayer } from './layers/player-progress.js';
-import { Scene } from './Scene.js';
-import { TimedScene } from './TimedScene.js';
-import { LevelTimer } from './traits/LevelTimer.js';
-import { Killable } from './traits/Killable.js';
+import { Level } from './././Level.js';
+import { Timer } from './././Timer.js';
+import { createLevelLoader } from './././loaders/level.js';
+import { loadFont } from './././loaders/font.js';
+import { loadEntities } from './././entities.js';
+import { makePlayer, createPlayerEnv, findPlayers } from './././player.js';
+import { setupKeyboard } from './././input.js';
+import { createDashboardLayer } from './././layers/dashboard.js';
+import { createColorLayer } from './././layers/color.js';
+import { createTextLayer } from './././layers/text.js';
+import { EventEmitter } from './././EventEmitter.js';
+import { SceneRunner } from './././SceneRunner.js';
+import { createPlayerProgressLayer } from './././layers/player-progress.js';
+import { Scene } from './././Scene.js';
+import { TimedScene } from './././TimedScene.js';
+import { LevelTimer } from './././traits/LevelTimer.js';
+import { Killable } from './././traits/Killable.js';
 
 //---- debug:
-import { createCameraLayer } from "./layers/camera.js";
-import { createCollisionLayer } from "./layers/collision.js";
-import { setupMouseControl } from './debug.js';
+import { createCameraLayer } from "./././layers/camera.js";
+import { createCollisionLayer } from "./././layers/collision.js";
+import { setupMouseControl } from './././debug.js';
 
 //---- main-only:
-//import { marioAI } from './marioAI.js';
-//import { elementFromHtml } from './element.js';
-import { startClock } from  './clock.js';
-import { buildrect } from './buildrect.js';
+//import { marioAI } from './././marioAI.js';
+//import { elementFromHtml } from './././element.js';
+import { startClock } from  './././clock.js';
+import { buildrect } from './././buildrect.js';
 
 
 //---- help me
 window.EventEmitter = new EventEmitter();
 
 //---- this is where you can put your mod
-//import { changeYerFont } from './mods/fontmod.js';
+//import { changeYerFont } from './././mods/fontmod.js';
 
 //---- main
 async function main(canvas, context) {
@@ -46,7 +46,7 @@ async function main(canvas, context) {
     //const context = canvas.getContext('2d');
     const audioContext = new AudioContext();
     //this is where you can put:
-    //changeYerFont("./img/SMB1/Fonts/Pixel/Black.png"),
+    //changeYerFont("./././img/SMB1/Fonts/Pixel/Black.png"),
     //inside of the promise:
     const [entityFactory, font] = await Promise.all([
         loadEntities(audioContext),

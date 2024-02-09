@@ -3,7 +3,7 @@ var CrtY = 0;
 // make the lines
 var lines = new Image();
 //lines.src = "http://i.imgur.com/TAJ0Zkw.png";//403 sorry
-lines.src = "./././img/Crt-filter_.png";
+lines.src = "img/Crt-filter_.png";
 
 window.addEventListener('load', fakeCRT, false);
 /*http://evanw.github.io/glfx.js/*/

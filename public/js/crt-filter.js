@@ -97,7 +97,7 @@ function fakeCRT(){
     source.id = 'old_' + source.id;
 
     setInterval(function() {
-        if (window.crtOn){
+        if (!window.crtOn){
             source.style.display = 'none';
             glcanvas.style.display = '';
         }else{

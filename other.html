@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en-us">
+    <head>
+        <title>Mario Pc Port</title>
+        <meta name="viewport" content="width = device-width, initial-scale = 1">
+        <meta http-equiv="Content-Type" content="text/javascript;">
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="assets/css/style.css" id="main-style">
+        <link rel="icon" href="assets/img/favicon.png" id="my-favicon">
+        <script type="module" src="assets/js/main.js" id="game-scripts"></script>
+        <script type="module" src="assets/js/catch.js" id="error-scripts"></script>
+        <script type="module" src="assets/js/element.js" id="visible-error-logging"></script>
+        <script type="text/javascript" src="assets/js/warn.js" id="console-warning"></script>
+        <script></script>
+    </head>
+    <body onload='
+    javascript:{
+        function elementFromHtml(html) {
+            const template = document.createElement("template");
+
+            template.innerHTML = html.trim();
+    
+            return template.content.firstElementChild;
+        }
+
+        var Error00 = elementFromHtml(`
+            <div id="Error-Screen" style="color: red; float:right;border-width: thick;border-style: solid;border-color: #4a4949;border-width: thick;border-width: 4px;border-style: thick;border-radius: 10px;background: black;">
+                <h1>Cross-Origin in a module is only supported in a http: protocol scheme. Not for a file url.</h1>
+            </div>
+        `);
+        var Error01 = elementFromHtml(`
+            <div id="Error-Screen" style="color: red; float:right;border-width: thick;border-style: solid;border-color: #4a4949;border-width: thick;border-width: 4px;border-style: thick;border-radius: 10px;background: black;">
+                <h1>In order to run this game, you need Chrome, Node.js, Electron, or a Web Server</h1>
+            </div>
+        `);
+        var Error02 = elementFromHtml(`
+            <div id="Npm-Screen" style="color: yellow; float:right;border-width: thick;border-style: solid;border-color: #4a4949;border-width: thick;border-width: 4px;border-style: thick;border-radius: 10px;background: black;">
+                <h1>In order to get a completly, 100% FREE server, run "npm run start" in the terminal. You will need Node.js to do so.</h1>
+            </div>
+        `);
+        var Error03 = elementFromHtml(`
+            <div id="Npm-Screen" style="color: green; float:right;border-width: thick;border-style: solid;border-color: #4a4949;border-width: thick;border-width: 4px;border-style: thick;border-radius: 10px;background: black;">
+                <h1>If none of these apply to you, try refreshing the page or trying a different browser</h1>
+            </div>
+        `);
+
+        function loadTheElement(loadError){
+            document.body.appendChild(loadError);
+        }
+        var checkproto = window.location.protocol
+        console.log("Window protocol is",checkproto);
+        /*if (checkproto === "file:") {
+            var app = document.getElementById("app");
+            document.body.removeChild(app);
+            console.log("div `app` deleted.");
+            console.error("Cross-Origin in a Module is only supported on a web server. Not for a file url.");
+            console.error("In order to run this game, you need Chrome, Node.js, Electron, or a Web Server");
+            console.log("In order to get a completly, 100% FREE server, run `npm run start` in the terminal. You will need Node.js to do so.");
+            console.error("Object",Error00, Error01, Error02);
+            loadTheElement(Error00);
+            loadTheElement(Error01);
+            loadTheElement(Error02);
+            loadTheElement(Error03);
+        }*/
+    }'>
+        <div id="app">
+            <center><canvas id="screen" width="320" height="320">Text shouldn't be visible</canvas></center>
+            <!--<center><h1><a href="wide.index.html">Play in Widescreen Mode</a></h1></center>-->
+            <!--<center><h1><a href="web.index.html">Play Online</a></h1></center>-->
+    </div>
+        
+    </body>
+</html>

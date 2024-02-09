@@ -66,9 +66,9 @@
             </Text>
         </div> 
     </body>
-    <script async src="../public/js/crt-filter.js" id="filter"></script>
-    <script type="module" src="../public/js/main.js" id="game-scripts"></script>
-    <script type="module" src="../public/js/catch.js" id="error-scripts"></script>
-    <script type="module" src="../public/js/element.js" id="visible-error-logging"></script>
+    <script async src="../public/js/crt-filter.js" id="filter" onerror="alert('welp, it seems the filter doesn\'t work. Oh well, just don\'t click \'c\'')"></script>
+    <script type="module" src="../public/js/main.js" id="game-scripts" onerror="alert('oh no, another error on the main.js')"></script>
+    <script type="module" src="../public/js/catch.js" id="error-scripts" onerror="alert('how is there an error on the error-finder. how???')"></script>
+    <script type="module" src="../public/js/element.js" id="visible-error-logging" onerror="alert('AAAAAAAAAA')"></script>
     <script src="../public/js/warn.js" id="console-warning"></script>
 </html>
